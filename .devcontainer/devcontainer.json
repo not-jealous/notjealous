@@ -1,0 +1,6 @@
+{
+    "name":"notjealous",
+    "image":"mcr.microsoft.com/devcontainers/universal:2",
+    "postCreateCommand": "bash ./.devcontainer/postcreate.sh",
+    "postStartCommand": "bash ./.devcontainer/poststart.sh"
+}

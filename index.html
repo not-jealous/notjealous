@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<div id="main">
+  <input type="text" id="myInput" onkeyup="searchNames()" placeholder="Search for names..">
+
+  <ul id="nameList"></ul>
+
+  <div id="pagination" class="pagination">
+    <button id="prev" class="paginate-btn">Previous</button>
+    <span id="pageInfo" class="page-info"></span>
+    <button id="next" class="paginate-btn">Next</button>
+    <button id="random" class="paginate-btn">Random</button>
+    <label for="namesPerPage">results per page:</label>
+    <select name="namesPerPage" id="names_per_page">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+  </div>
+</div>
+</body>
+</html>
+<link rel="stylesheet" href="main.css">
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script type="text/javascript" src="main.js"></script>
