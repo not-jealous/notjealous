@@ -8,6 +8,7 @@ async function readUrlListIntoArray() {
     const response = await fetch("./urls_to_show");
     const file_text = await response.text();
     base_url_array = file_text.split('\n');
+    base_url_array.pop(); // remove empty last element
     const list_to_add_url = document.getElementById('nameList');
     display_array = [...base_url_array]; // set url array for future searching
 }
@@ -89,12 +90,15 @@ async function initialize() {
 }
 
 function randomPage() {
-    (Math.floor(Math.random() * Math.ceil(display_array.length / namesPerPage))+1); // Why are we starting the ar at 1??
+    //TODO: small error when changing result size after random page
+    console.log(display_array);
+    console.log(Math.floor(Math.random() * Math.ceil(display_array.length / namesPerPage))+1);
+    return (Math.floor(Math.random() * Math.ceil(display_array.length / namesPerPage))+1); // Why are we starting the ar at 1??
 }
 
 document.getElementById('prev').addEventListener('click', () => changePage(-1));
 document.getElementById('next').addEventListener('click', () => changePage(1));
-document.getElementById('random').addEventListener('click', () => displayDomainNames(randomPage);
+document.getElementById('random').addEventListener('click', () => displayDomainNames(randomPage()));
 document.getElementById('names_per_page').addEventListener('change', () => displayDomainNames(currentPage));
 
 initialize();

@@ -2,4 +2,4 @@
 set -xe
 npm install -g
 sudo apt update
-sudo apt install dnsutils
+sudo apt install dnsutils -y
