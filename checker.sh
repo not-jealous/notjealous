@@ -41,12 +41,16 @@ while read -r url; do
   pids+=("$pid")
 done < "$input_file"
 
-echo "one" >> $log_file
+log "one"
 for pid in "${pids[@]}"; do
   #printf "total progress $i/$total_lines\n" >&2
-  log "$pid pid waiting to finish"
-  wait -n $pid
-  log "$pid pid waiting to finish"
+  log "checking if pid $pid is active"
+  while kill -o $pid > /dev/null 2>&1
+  do
+    log "$pid pid waiting to finish"
+    wait -n $pid
+    log "$pid pid done waiting to finish"
+  done
 done
 
 # TODO we should cleanup any background tasks before exiting  
