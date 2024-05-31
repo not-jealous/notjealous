@@ -84,16 +84,16 @@ function changePage(offset) {
     displayDomainNames(currentPage);
 }
 
-async function initialize() {
-    await readUrlListIntoArray(url_array); // TODO: this should not be done every reload, will cause errors
-    displayDomainNames(currentPage);
-}
-
 function randomPage() {
     //TODO: small error when changing result size after random page
     console.log(display_array);
     console.log(Math.floor(Math.random() * Math.ceil(display_array.length / namesPerPage))+1);
     return (Math.floor(Math.random() * Math.ceil(display_array.length / namesPerPage))+1); // Why are we starting the ar at 1??
+}
+
+async function initialize() {
+    await readUrlListIntoArray(url_array); // TODO: this should not be done every reload, will cause errors
+    displayDomainNames(randomPage());
 }
 
 document.getElementById('prev').addEventListener('click', () => changePage(-1));
