@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
 <div id="main">
   <h1>not jealous</h1>
@@ -13,6 +15,8 @@
     <th id="th1">
       <input style=""type="text" id="myInput" onkeyup="searchNames()" placeholder="Search for names..">
     </th>
+  </tr>
+  <tr>
     <th>
       <div id="pagination" class="pagination">
         <button id="prev" class="paginate-btn">Previous</button>
@@ -27,6 +31,7 @@
     </select>
       </div>
     </th>
+  </tr>
   </table>
   <span id="pageInfo" class="page-info"></span>
   <ul id="nameList"></ul>
@@ -37,3 +42,4 @@
 <link rel="stylesheet" href="main.css">
 <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
 <script type="text/javascript" src="main.js"></script>
+

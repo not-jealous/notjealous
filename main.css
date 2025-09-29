@@ -67,3 +67,79 @@
       max-width: 500px;
       margin: auto;
     }
+
+/* --- Mobile view --- */
+@media screen and (max-width: 768px) {
+  * {
+    /*background-color:#254c39;*/
+    /*color:*/
+    background-color:#a04242;
+    color:#f29999
+  }
+  h1 {
+    font-size: 46px;
+  }
+
+  #th1 {
+    padding-left: 0px;
+    padding-right: 8px;
+  }
+  
+  #nameList {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #main {
+    max-width: 700px;
+    margin: auto;
+    padding-left: 60px;
+  }
+  
+  #myInput {
+    width: 100%;
+    /*background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    /*background-position: 10px 12px; /* Position the search icon */
+    /*background-repeat: no-repeat; /* Do not repeat the icon image */
+    /*width: 100%;*/
+    font-size: 16px; /* Increase font-size */
+    /*padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    /*margin-bottom: 12px; /* Add some space below the input */
+    /*width: 500px;*/
+  }
+  
+  #nameList {
+    /* Remove default list styling */
+    padding: 0;
+    list-style-type: none;
+    /*padding: 0;/*
+    /*margin: 0;/*
+    /*width: 100%;*/
+  }
+  
+  #nameList li {
+      border: 0px solid #254c39; /* Add a border to all links */
+      border-style: none none none none;
+      margin-top: -1px; /* Prevent double borders */
+      /* background-color:#6a8e72; */
+      padding: 4px; /* Add some padding */
+      text-decoration: none; /* Remove default text underline */
+      font-size: 24px; /* Increase the font-size */
+      color: black; /* Add a black text color */
+      display: block; /* Make it into a block element to fill the whole list */
+      width: 50%;
+      /*border-top-left-radius: 8px;*/
+      /*border-bottom-left-radius: 8px;*/
+    }
+    
+    #nameList li a:hover:not(.header) {
+      background-color: #eee; /* Add a hover effect to all links, except for headers */
+    }
+  
+    #pagination {
+      max-width: 500px;
+      margin: auto;
+    }
+
