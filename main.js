@@ -101,4 +101,7 @@ document.getElementById('next').addEventListener('click', () => changePage(1));
 document.getElementById('random').addEventListener('click', () => displayDomainNames(randomPage()));
 document.getElementById('names_per_page').addEventListener('change', () => displayDomainNames(currentPage));
 
-initialize();
+document.addEventListener('DOMContentLoaded', function() {
+  initialize();
+});
+
