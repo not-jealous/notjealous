@@ -21,7 +21,7 @@
     max-width: 500px;
     margin: auto;
   }
-  
+
   #myInput {
     width: 100%;
     /*background-image: url('/css/searchicon.png'); /* Add a search icon to input */
@@ -34,7 +34,7 @@
     /*margin-bottom: 12px; /* Add some space below the input */
     /*width: 500px;*/
   }
-  
+
   #nameList {
     /* Remove default list styling */
     padding: 0;
@@ -68,6 +68,18 @@
       margin: auto;
     }
 
+/* --- Desktop view --- */
+@media screen and (min-width: 768px) {
+  table {
+    width: 75%;
+  }
+
+  .radios {
+    justify-content: left;
+    display: flex;
+  }
+}
+
 /* --- Mobile view --- */
 @media screen and (max-width: 768px) {
   * {
@@ -76,6 +88,7 @@
     background-color:#a04242;
     color:#f29999
   }
+
   h1 {
     font-size: 46px;
   }
