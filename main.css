@@ -6,6 +6,15 @@
     color:#f29999
   }
 
+  table {
+    width: 75%
+  }
+
+  .radios {
+    justify-content: left;
+    display: flex;
+  }
+
   #th1 {
     padding-left: 0px;
     padding-right: 8px;
@@ -76,6 +85,12 @@
     background-color:#a04242;
     color:#f29999
   }
+
+  .pagination {
+    justify-content: left;
+    display: flex;
+  }
+
   h1 {
     font-size: 46px;
   }
