@@ -6,15 +6,6 @@
     color:#f29999
   }
 
-  table {
-    width: 75%
-  }
-
-  .radios {
-    justify-content: left;
-    display: flex;
-  }
-
   #th1 {
     padding-left: 0px;
     padding-right: 8px;
@@ -76,6 +67,18 @@
       max-width: 500px;
       margin: auto;
     }
+
+/* --- Desktop view --- */
+@media screen and (min-width: 768px) {
+  table {
+    width: 75%;
+  }
+
+  .radios {
+    justify-content: left;
+    display: flex;
+  }
+}
 
 /* --- Mobile view --- */
 @media screen and (max-width: 768px) {
