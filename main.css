@@ -21,7 +21,7 @@
     max-width: 500px;
     margin: auto;
   }
-  
+
   #myInput {
     width: 100%;
     /*background-image: url('/css/searchicon.png'); /* Add a search icon to input */
@@ -34,7 +34,7 @@
     /*margin-bottom: 12px; /* Add some space below the input */
     /*width: 500px;*/
   }
-  
+
   #nameList {
     /* Remove default list styling */
     padding: 0;
@@ -87,11 +87,6 @@
     /*color:*/
     background-color:#a04242;
     color:#f29999
-  }
-
-  .pagination {
-    justify-content: left;
-    display: flex;
   }
 
   h1 {
