@@ -38,6 +38,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: update apt sources
         run: sudo apt update
 
@@ -47,11 +52,14 @@ jobs:
       - name: Check which URLs are available
         run: ./checker.sh # Depends on dnsutils
 
+      - name: Build single-file site (dist/index.html)
+        run: node scripts/build-single-file.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload the built single-file site
+          path: 'dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
